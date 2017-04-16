@@ -1,0 +1,246 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Dancing Script;
+}
+body{
+	background-color: #02010a;
+}
+header{
+	margin: 0 auto;
+	margin-top: 3px;
+	width: 900px;
+	background-color: #5b7989;
+	-webkit-border-radius: 10px 10px 0px 0px;/* Chrome, Safari, Opera */
+	-moz-border-radius: 10px 10px 0px 0px;/* IE 9 */
+	border-radius: 10px 10px 0px 0px;	
+	display: flex;
+	flex-direction: row;
+	animation: animacionPagina 2s 1s; /*el primer numero indica cuanto se va a durar y el segundo numero cuanto va a aparecer la animacion*/
+}
+header nav {
+	padding: 20px;	
+	margin-left: 60%;	
+}
+nav a{
+	color: white;
+	padding: 10px;
+	text-decoration: none; /*quitarle es subrayado*/		
+}
+header h1{
+	margin-left: 1%;
+	padding: 10px;
+	color: white;
+	text-shadow: 1px 2px 3px #02010a;
+}
+#contenedor{
+	width: 900px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+img[src$='.jpg']{
+	width: 90%;
+	height: 90%;
+}
+#contenido1{
+	background-color: #82c3a6;
+	width: 900px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+#img1{
+	width: 33.3%;
+	text-align: center;
+}
+#img1 img{
+	margin-top: 4%;
+	box-shadow: 3px 3px #02010a;
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	filter: blur(10px);
+}
+#img2{
+	width: 33.3%;
+	text-align: center;
+}
+#img2 img{
+	margin-top: 4%;
+	box-shadow: 3px 3px #02010a;
+}
+#img3{
+	width: 33.3%;
+	text-align: center;
+}
+#img3 img{
+	margin-top: 4%;
+	box-shadow: 3px 3px #02010a;
+	-webkit-filter: sepia(90%);
+	-moz-filter: sepia(90%);
+	filter: sepia(90%);
+}
+.par{ /*ESCALAS DE GRISES*/
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+#contenido2{
+	background-color: #82c3a6;
+	width: 900px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+#img4{
+	width: 33.3%;
+	text-align: center;
+}
+#img4 img{
+	margin-top: 4%;
+	box-shadow: 3px 3px #02010a;
+	margin-bottom: 4%;
+}
+#img5{
+	width: 33.3%;
+	text-align: center;
+}
+#img5 img{
+	margin-top: 4%;
+	box-shadow: 3px 3px #02010a;
+	margin-bottom: 4%;
+}
+#img6{
+	width: 33.3%;
+	text-align: center;
+}
+#img6 img{
+	margin-top: 4%;
+	box-shadow: 3px 3px #02010a;
+	margin-bottom: 4%;
+}
+img[src$='.png']{
+	width: 10%;
+}
+footer{
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	width: 900px;
+	background-color: #C6d5c5;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 0px 0px 10px 10px;	
+}
+#contacto{
+	width: 25%;
+	padding: 5px;
+	margin: 10px;
+}
+h2 ~ h5{
+	font-size: 1.1em;
+}
+#terminos{
+	width: 25%;
+	padding: 5px;
+	margin: 10px;
+}
+#redesSociales{
+	width: 25%;
+	padding: 5px;
+	margin: 10px;
+}
+#derechos{
+	width: 25%;
+	padding: 5px;
+	margin: 10px;
+}
+/*aqui se aplica el diseño adaptativo (responsive), si el tamaño maximo de la pantalla es de 900px aplica lo de abajo*/
+@media screen and (max-width: 900px){
+	header{
+		width: 98%;
+		display: flex;
+		flex-direction: column;
+		animation: animacionCel 1s 1s;	
+	}
+	header nav{
+		margin-left: 5%;
+		text-align: center;
+	}
+	header h1{
+		text-align: center;
+	}
+	#contenedor{
+		width: 98%;
+		margin: 0 auto;
+	}
+	#contenido1{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	#contenido1 div, #contenido2 div{
+		width: 100%;
+	}
+	img[src$='.jpg']{
+	width: 90%;
+	}	
+	#contenido2{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	footer{
+		width: 98%;
+		display: flex;
+		flex-direction: column;
+	}
+	#contacto{
+		width: 50%;
+		margin-left: 0;
+		padding-left: 8%;
+	}
+	#terminos{
+		width: 80%;
+		margin-left: 0;
+		padding-left: 8%;
+	}
+	#redesSociales{
+		width: 50%;
+		margin-left: 0;
+		padding-left: 8%;
+	}
+	#derechos{
+		width: 50%;
+		margin-left: 0;
+		padding-left: 8%;
+	}
+}
+
+/* animacion slidein para que la pagina se deslice hacia arriba*/
+@-webkit-keyframes animacionPagina{
+	0%{
+		margin-top:100%;
+	}
+	25%{
+		margin-top:88%;
+	}
+	50%{
+		margin-top:44%;
+	}
+	75%{
+		margin-top:-5%;
+	}
+	100%{
+		margin-top: 0%;
+	}
+}
+/* animacion slidein para que la pagina se deslice hacia arriba (CELULAR)*/
+@-webkit-keyframes animacionCel{
+	from{
+		margin-top: 150%;
+	}
+	to{
+		margin-top: 0%;
+	}
+}

@@ -1,0 +1,230 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Dancing Script;
+}
+body{
+	background-color: #02010a;
+}
+header{
+	margin:0 auto;
+	margin-top: 3px;
+	width: 900px;
+	background-color: #5b7989;
+	-webkit-border-radius: 10px 10px 0px 0px;/* Chrome, Safari, Opera */
+	-moz-border-radius: 10px 10px 0px 0px;/* IE 9 */
+	border-radius: 10px 10px 0px 0px;	
+	display: flex;
+	flex-direction: row;
+	animation: animacionPagina 2s 1s; /*el primer numero indica cuanto se va a durar y el segundo numero cuanto va a aparecer la animacion*/
+}
+header nav {
+	padding: 20px;	
+	margin-left: 30%;	
+}
+nav a{
+	color: white;
+	padding: 10px;
+	text-decoration: none; /*quitarle es subrayado*/		
+}
+header h1{
+	padding: 10px;
+	color: white;
+	text-shadow: 1px 2px 3px #02010a;
+}
+#contenedor{
+	margin: 0 auto;
+	width: 900px;
+	display: flex;
+	flex-direction: column;
+}
+#contenido1{
+	background-color: #82c3a6;
+	text-align: center;
+	padding: 5px;
+}
+#imgPrincipal img{
+	width: 43%;	
+	box-shadow: 3px 3px black;
+}
+#contenido2{
+	background-color: #d5c75f;
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+}
+
+#img1{
+	text-align: center;
+	width: 50%;
+}
+#img2{
+	text-align: center;
+	width: 50%;
+}
+#imgPaisaje img{
+	width: 90%;
+	box-shadow: 3px 3px #82c3a6;
+	-webkit-transition-property: transform; /* Chrome, Safari, Opera */
+	-webkit-transition-duration: 1s; /* Chrome, Safari, Opera */
+	-moz-transition-property: transform;
+	-moz-transition-duration: 1s;
+	transition-property: transform;
+	transition-duration: 1s;
+}
+#imgPaisaje img:hover{ /*ROTA LA IMAGEN CADA VEZ QUE SE PONE EL CURSOR EN LA IMAGEN*/
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	transform: rotate(10deg);
+}
+
+#imgRetrato img{
+	width: 70%;
+	box-shadow: 3px 3px #82c3a6;
+	-webkit-transition-property: transform; /* Chrome, Safari, Opera */
+	-webkit-transition-duration: 1s; 
+	-moz-transition-property: transform;
+	-moz-transition-duration: 1s;
+	transition-property: transform;
+	transition-duration: 1s;	
+}
+#imgRetrato img:hover{ /*SE TRASLADA HACIA ARRIBA Y HACIA LA DERECHA CADA VEZ QUE SE PONE EL CURSOR EN LA IMAGEN */
+	-webkit-transform: translateY(5px);
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateY(5px);
+	-moz-transform: translateX(20px);
+	transform: translateY(5px); 
+	transform: translateX(20px); 
+}
+figcaption{
+	font-weight: bold; /*colocar el texto en negrita*/
+	font-size: 1.1em;
+}
+img[src$='.png']{
+	width: 10%;
+}
+footer{
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	width: 900px;
+	background-color: #C6d5c5;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 0px 0px 10px 10px;	
+}
+#contacto{
+	width: 25%;
+	padding: 5px;
+	margin: 10px;
+}
+h2 ~ h5{
+	font-size: 1.1em;
+}
+#terminos{
+	width: 25%;
+	padding: 5px;
+	margin: 10px;
+}
+#redesSociales{
+	width: 25%;
+	padding: 5px;
+	margin: 10px;
+}
+#derechos{
+	width: 25%;
+	padding: 5px;
+	margin: 10px;
+}
+/*aqui se aplica el diseño adaptativo (responsive), si el tamaño maximo de la pantalla es de 900px aplica lo de abajo*/
+@media screen and (max-width: 900px){
+	
+	header{
+		width: 98%;
+		display: flex;
+		flex-direction: column;
+		animation: animacionCel 1s 1s;
+	}
+	header nav{
+		margin-left: 5%;
+		text-align: center;
+	}
+	header h1{
+		text-align: center;
+	}
+	#contenedor{
+		width: 98%;
+		margin:0 auto;
+	}
+	#contenido1{
+		width: 100%;
+		padding: 0;
+	}
+	#imgPrincipal img{
+		width: 80%;
+		margin: 2%;
+	}
+	#contenido2{
+		display: flex;
+		flex-direction: column;
+	}
+	#img1{
+		width: 100%;
+	}
+	#img2{
+		width: 100%;
+	}
+	footer{
+		display: flex;
+		flex-direction: column;
+		width: 98%;
+		margin: 0 auto;
+	}
+	#contacto{
+		width: 50%;
+		margin-left: 0;
+		padding-left: 8%;
+	}
+	#terminos{
+		width: 80%;
+		margin-left: 0;
+		padding-left: 8%;
+	}
+	#redesSociales{
+		width: 50%;
+		margin-left: 0;
+		padding-left: 8%;
+	}
+	#derechos{
+		width: 50%;
+		margin-left: 0;
+		padding-left: 8%;
+	}
+}
+/* animacion slidein para que la pagina se deslice hacia arriba (ESCRITORIO)*/
+@-webkit-keyframes animacionPagina{
+	0%{
+		margin-top:150%;
+	}
+	25%{
+		margin-top:100%;
+	}
+	50%{
+		margin-top:50%;
+	}
+	75%{
+		margin-top:-5%;
+	}
+	100%{
+		margin-top: 0%;
+	}
+}
+/* animacion slidein para que la pagina se deslice hacia arriba (CELULAR)*/
+@-webkit-keyframes animacionCel{
+	from{
+		margin-top: 150%;
+	}
+	to{
+		margin-top: 0%;
+	}
+}
